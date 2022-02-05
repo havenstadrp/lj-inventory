@@ -2290,7 +2290,7 @@ var requiredItemOpen = false;
     Inventory.slots = 40;
 
     Inventory.dropslots = 30;
-    Inventory.droplabel = "Drop";
+    Inventory.droplabel = "Laat vallen";
     Inventory.dropmaxweight = 100000;
 
     Inventory.Error = function() {

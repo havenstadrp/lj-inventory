@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
-.bg-button { background: #646475!important; }
+.bg-button { background: rgba(23,23,23, 90)!important; }
 .text-check { color: rgba(255, 255, 255, 0.8)!important; }
 .text-checkbox { color: #0fffd5!important; }
 .q-checkbox__svg { color: #000!important; }
 div#q-loading-bar { display: none!important; }
 ::-webkit-scrollbar { display: none!important; }
-.q-card { background: rgb(35, 34, 56)!important; }
+.q-card { background: rgb(23, 23, 23)!important; }
 p { margin: 0 !important; }
 .q-btn { align-items: center!important; }
 .text-h6 { color: #fff; }
@@ -45,7 +45,7 @@ p { margin: 0 !important; }
     line-height: 48px;
     text-transform: normal;
     font-size: 1.5vh;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
   }
 
 /* rgb() */
@@ -68,25 +68,25 @@ input[type=number]::-webkit-outer-spin-button {
     width: 134.6%;
     margin-left: 0%;
     margin-top: 6.3%;
-    background-color: rgb(39 39 49);
+    background-color: rgb(23 23 23);
 }
 
 #progressbar-other {
     width: 134.8%;
     margin-left: -1.5%;
     margin-top: 6.3%;
-    background-color: rgb(39 39 49);
+    background-color: rgb(23 23 23);
 }
 
 .pro {
-    background: linear-gradient(to right, #0fffd5, #0b9a82 500px);
+    background: linear-gradient(to right, #0fffd5, #dc143c 500px);
     height: 10px;
     max-width: 100%;
     transition: width 1s, background-color 1s;
 }
 
 .pro1 {
-    background: linear-gradient(to right, #0fffd5, #0b9a82 500px);
+    background: linear-gradient(to right, #0fffd5, #dc143c 500px);
     height: 10px;
     max-width: 100%;
     transition: width 1s, background-color 1s;
@@ -143,8 +143,8 @@ body {
     max-width: 41%;
     height: 75%;
     max-height: 81%;
-    background: rgb(11 11 11 / 80%);
-    border-radius: 8px;
+    background: rgb(23 23 23 / 50%);
+	border-radius: 10px;
 }
 
 .player-inventory {
@@ -171,8 +171,8 @@ body {
     max-width: 41%;
     height: 75%;
     max-height: 81%;
-    background: rgb(11 11 11 / 80%);
-    border-radius: 8px;
+    background: rgb(23 23 23 / 50%);
+	border-radius: 10px;
 }
 
 .other-inventory {
@@ -206,7 +206,7 @@ body {
     text-align: left;
     font-size: 9vh;
     line-height: 1.8vh;
-    font-family: 'Roboto', sans-serif !important;
+	font-family: 'Poppins', sans-serif;
 }
 
 .inv-options {
@@ -216,12 +216,12 @@ body {
     padding-bottom: 15px;
     height: auto;
     margin: 16% auto;
-    background: rgb(11 11 11 / 80%);
+    background: rgb(23 23 23 / 80%);
+	border-radius: 10px;
     right: 0px;
     width: 11%;
     left: 3vh;
     cursor: pointer; /* Can also be 'none' however, as these are the buttons I feel as the pointer fits better */
-    border-radius: 8px;
 }
 
 .combine-option-container {
@@ -238,14 +238,16 @@ body {
     width: 13.5vh;
     height: 13vh;
     float: left;
-    border: 1px solid rgba(255, 255, 255, 0.02);
-    background-color: rgb(102 102 113 / 20%) !important;
+    border: 2px solid rgba(255, 255, 255, 0.02);
+	border-radius: 10px;
+    background-color: rgb(23 23 23 / 70%);
     margin: 2px;
     transition: opacity 0.2s ease 0s;
 }
 
 .item-slot:hover {
-    background-color: rgb(48 48 56 / 30%) !important;
+	border: 2px solid #dc143c;
+	background-color: rgb(23 23 23 / 90%);
 }
 
 .inv-option-item {
@@ -264,7 +266,7 @@ body {
     text-align: center;
     font-size: 1.5vh;
     font-weight: 300;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     outline: none;
 }
 
@@ -283,7 +285,7 @@ body {
     /* background-color: rgba(5, 5, 5, 0.5); */
     width: 100%;
     color: white;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     background-color: rgba(0, 0, 0, 0.192);
     font-size: 1.vh;
     padding: .4vh;
@@ -292,7 +294,7 @@ body {
 .ammo-info {
     position: relative;
     color: white;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     font-weight: 200;
     font-size: 1.vh;
     margin-left: .8vh;
@@ -312,7 +314,7 @@ body {
     text-transform: normal;
     font-size: 1.5vh;
     font-weight: 300;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 .inv-option-item {
@@ -320,11 +322,11 @@ body {
     width: 100%;
     height: 50px;
     margin-left: 0%;
-    background-color: #646475 !important;
-    border: none;
+    background-color: rgba(23, 23, 23, 90);
+	border: 3px solid rgba(23, 23, 23);
     color: white;
     transition: background-color .1s linear;
-    border-radius: 0px!important;
+    border-radius: 10px!important;
 }
 .inv-option-hand {
     margin-top: 20%;
@@ -335,7 +337,7 @@ body {
 }
 
 .inv-option-item:hover {
-    background-color: #5c5c6c;
+    background-color: #dc143c;
 }
 
 .btn-combine {
@@ -380,10 +382,12 @@ body {
     font-size: 1.25vh;
     font-weight: 400;
     cursor: none;
+	font-family: 'Poppins', sans-serif !important;
 }
 
 .item-slot-amount > p:after {
     content: "x"
+
 }
 
 .item-slot-name {
@@ -415,7 +419,7 @@ body {
     font-size: 1.3vh;
     text-align: left;
     letter-spacing: 0px;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     white-space: pre;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -491,7 +495,7 @@ body {
     position: relative;
     color: white;
     font-size: 20px;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     font-weight: 600;
     letter-spacing: 0.01vh;
     left: 0px;
@@ -506,7 +510,7 @@ body {
     color: rgb(255, 255, 255);
     font-size: 16px;
     font-weight: 900;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     letter-spacing: 0.1vh;
     bottom: 40px;
     right: -35%;
@@ -517,7 +521,7 @@ body {
     position: relative;
     color: white;
     font-size: 20px;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     font-weight: 600;
     letter-spacing: 0.01vh;
     left: -9px;
@@ -533,7 +537,7 @@ body {
     color: rgb(255, 255, 255);
     font-size: 16px;
     font-weight: 900;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     letter-spacing: 0.1vh;
     bottom: 40px;
     right: -33.5%;
@@ -550,7 +554,7 @@ body {
 .player-inv-weight > p {
     color: white;
     font-size: 12px;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 .other-inv-info {
@@ -562,10 +566,10 @@ body {
 }
 
 .ply-iteminfo-container {
-    background: rgba(35, 34, 56, 0.90);
+    background: rgba(23, 23, 23, 0.90);
     border-radius: 3px;
     color: rgba(220, 220, 220, 1);
-    border: 1px solid rgba(255, 255, 255, 0.02);
+    border: 2px solid rgba(255, 255, 255, 0.02);
     font-size: 1.35vh;
     font-weight: 0;
     left: 41%;
@@ -590,14 +594,14 @@ body {
     letter-spacing: 0.3px;
     line-height: 1;
     color: white;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     padding-top: 5px;
     padding-left: 5px;
 }
 
 .item-info-line {
     position: absolute;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     width: 85%;
     background-color: #6d6d6d96;
     height: 0.13vh;
@@ -609,7 +613,7 @@ body {
     font-weight: 400;
     line-height: 1.1;
     letter-spacing: 0.3px;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     color: white;
     padding-left: 5px;
     padding-top: .5vh;
@@ -638,7 +642,9 @@ body {
     margin-right: 1vh;
     width: 10vh;
     height: 11vh;
-    background: rgba(35, 34, 56, 0.95);
+    background: rgba(23, 23, 23, 90);
+	border-radius: 10px;
+	
 }
 
 #itembox-action {
@@ -653,7 +659,7 @@ body {
 #itembox-action > p {
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     white-space: pre;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -686,6 +692,7 @@ body {
     white-space: pre;
     text-overflow: ellipsis;
     overflow: hidden;
+	font-family: 'Poppins', sans-serif !important;
 }
 
 .requiredItem-container {
@@ -703,7 +710,7 @@ body {
     height: 11vh;
     float: left;
     margin-left: 20px;
-    background: rgba(35, 34, 56, 0.95);
+    background: rgba(23, 23, 23, 0.95);
 }
 
 #requiredItem-action {
@@ -713,7 +720,7 @@ body {
     color: white;
     padding: 3px;
     font-size: 14px;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 #requiredItem-label {
@@ -735,6 +742,7 @@ body {
     white-space: pre;
     text-overflow: ellipsis;
     overflow: hidden;
+	font-family: 'Poppins', sans-serif !important;
 }
 
 .item-slot-img-itembox-test img {
@@ -769,7 +777,7 @@ body {
     text-align: left;
     font-size: 9vh;
     line-height: 0.5vh;
-    font-family: Roboto, sans-serif !important;
+    font-family: Poppins, sans-serif !important;
     z-index: -1;
 }
 
@@ -783,7 +791,8 @@ body {
     margin: 3px;
     transition: opacity 0.2s;
     opacity: 1.0;
-    background: rgba(35, 34, 56, 0.95);
+    background: rgba(23, 23, 23, 0.95);
+	border-radius: 10px;
     z-index: 9999;
 }
 
@@ -797,10 +806,12 @@ body {
     color: #ffffff;
     text-align: left;
     font-size: 14px;
+	font-family: 'Poppins', sans-serif !important;
 }
 
 .z-hotbar-item-slot-amount > p:after {
     content: "x";
+	font-family: 'Poppins', sans-serif !important;
 }
 
 .z-hotbar-item-slot-amount-name {
@@ -813,6 +824,7 @@ body {
     color: #ffffff;
     text-align: right;
     font-size: 14px;
+	font-family: 'Poppins', sans-serif !important;
 }
 
 .z-hotbar-item-slot-label {
@@ -829,7 +841,7 @@ body {
     font-size: 11.5px;
     text-align: center;
     text-transform: lowercase;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     font-variant: small-caps;
 }
 
@@ -960,7 +972,7 @@ body {
     top: 9vh;
     font-size: 1.4vh;
     color: rgba(255, 255, 255, 0.8);
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 .weapon-attachments-container-detail-durability {
@@ -1000,7 +1012,7 @@ body {
     left: 0;
     margin: 5vh;
     color: rgba(255, 255, 255, 0.8);
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     font-size: 1.4vh
 }
 
@@ -1035,7 +1047,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     line-height: 1.9vh;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     font-weight: 100;
 }
 
@@ -1115,7 +1127,7 @@ body {
     text-align: center;
     line-height: 6vh;
     color: white;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     transition: .05s linear;
 }
 

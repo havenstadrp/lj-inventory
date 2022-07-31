@@ -304,10 +304,7 @@ function FormatAttachmentInfo(data) {
                             '"> <div class="weapon-attachment-label"><p>' +
                             attachment.label +
                             '</p></div> <div class="weapon-attachment-img"><img src="./images/' +
-                            WeaponType +
-                            "_" +
-                            attachment.attachment +
-                            '.png"></div> </div>'
+                            attachment.image + '"></div> </div>'
                         );
                         attachment.id = i;
                         $("#weapon-attachment-" + i).data("AttachmentData", attachment);
@@ -626,7 +623,65 @@ function FormatItemInfo(itemData, dom) {
         } else if (itemData.name == "labkey") {
             $(".item-info-title").html("<p>" + itemData.label + "</p>");
             $(".item-info-description").html("<p>Lab: " + itemData.info.lab + "</p>");
-        } else {
+        } 
+        else if (itemData.name == "pallmall") { // Cigarette Pack
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");
+            $(".item-info-description").html(
+                "<p>" + itemData.info.uses + " cigarettes left.</p>"
+            );
+        } else if (itemData.name == "lm") { // Cigarette Pack
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");
+            $(".item-info-description").html(
+                "<p>" + itemData.info.uses + " cigarettes left.</p>"
+            );
+        } else if (itemData.name == "jbs") { // Cigarette Pack
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");
+            $(".item-info-description").html(
+                "<p>" + itemData.info.uses + " cigarettes left.</p>"
+            );
+        } else if (
+            itemData.name == "keepcompanionhusky" ||
+            itemData.name == "keepcompanionrottweiler" ||
+            itemData.name == "keepcompanionmtlion" ||
+            itemData.name == "keepcompanionmtlion2" ||
+            itemData.name == "keepcompanioncat" ||
+            itemData.name == "keepcompanionpoodle" ||
+            itemData.name == "keepcompanionpug" ||
+            itemData.name == "keepcompanionretriever" ||
+            itemData.name == "keepcompanionshepherd" ||
+            itemData.name == "keepcompanionwesty"
+        ) {
+            let gender = itemData.info.gender;
+            gender ? (gender = "male") : (gender = "female");
+            $(".item-info-title").html("<p>" + itemData.info.name + "</p>");
+            $(".item-info-description").html(
+                "<p><strong>Owner Phone: </strong><span>" +
+                itemData.info.owner.phone +
+                "</span></p><p><strong>Variation: </strong><span>" +
+                `${itemData.info.variation}` +
+                "</span></p><p><strong>Gender: </strong><span>" +
+                `${gender}` +
+                "</span></p><p><strong>Health: </strong><span>" +
+                itemData.info.health +
+                "</span></p><p><strong>Xp/Max: </strong><span>" +
+                `${itemData.info.XP} / ${maxExp(itemData.info.level)}` +
+                "</span></p><p><strong>Level: </strong><span>" +
+                itemData.info.level +
+                "</span></p><p><strong>Age: </strong><span>" +
+                callAge(itemData.info.age) +
+                "</span></p><p><strong>Food: </strong><span>" +
+                itemData.info.food +
+                "</span></p>" +
+                "</span></p><p><strong>Thirst: </strong><span>" +
+                itemData.info.thirst +
+                "</span></p>"
+            );
+        }
+        else if (itemData.name == "petwaterbottleportable") {
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");
+            $(".item-info-description").html("<p>capacity(L): " + itemData.info.liter + "</p>");
+        }
+        else {
             $(".item-info-title").html("<p>" + itemData.label + "</p>");
             $(".item-info-description").html("<p>" + itemData.description + "</p>");
         }
@@ -3059,3 +3114,38 @@ $("#item-give").droppable({
         );
     },
 });
+
+function callAge(age) {
+    let max = 0;
+    let min = 0;
+    if (age === 0) {
+        return 0;
+    }
+    for (let index = 1; index < 10; index++) {
+      max = 60 * 60 * 24 * index;
+      min = 60 * 60 * 24 * (index - 1);
+        if (age >= min && age <= max) {
+        return index - 1;
+        }
+    }
+}
+
+function maxExp(level) {
+    let xp = Math.floor(
+      (1 / 4) * Math.floor((level + 300) * Math.pow(2, level / 7))
+    );
+    return xp;
+}
+
+function currentLvlExp(xp) {
+    let maxExp = 0;
+    let minExp = 0;
+
+    for (let index = 0; index <= 50; index++) {
+        maxExp = Math.floor(Math.floor((i + 300) * (2 ^ (i / 7))) / 4);
+        minExp = Math.floor(Math.floor((i - 1 + 300) * (2 ^ ((i - 1) / 7))) / 4);
+        if (xp >= minExp && xp <= maxExp) {
+            return i;
+        }
+    }
+}
